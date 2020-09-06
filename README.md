@@ -14,6 +14,8 @@
 > Simple telegram watermark bot with NodeJs and ffmpeg .
 PLEASE Give a ⭐️ if this project is useful.
 
+ <img alt="sample" src="https://raw.githubusercontent.com/mokaramifar/node-telegram-watermark/master/GIT/img.jpg" />
+
 ## Install
 
 ```sh
