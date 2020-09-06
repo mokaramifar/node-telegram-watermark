@@ -1,36 +1,35 @@
-const token = "YOUR TOKEN HERE!";
-const waterMarkList = [
+const waterMarksList = [
   {
     text: "طوطی 🦜",
-    address: "/template/parrot.png",
+    address: "template/parrot.png",
   },
   {
     text: "ربات 🤖",
-    address: "/template/robot.png",
+    address: "template/robot.png",
   },
   {
     text: "خانه 🏠",
-    address: "/template/home.png",
+    address: "template/home.png",
   },
 ];
-
-module.exports.getToke=()=>{
-  return token
-}
-module.exports.inline_keyBoard = async (type, dst) => {
-  let tmp = [];
-  waterMarkList.forEach((item, index) => {
-    tmp.push([
-      {
-        text: item.text,
-        callback_data: `${type}@@${index}@@${dst}`,
-      },
-    ]);
-  });
-  return {
-    inline_keyboard: tmp,
-  };
+const imageFfmpeg = [
+  `-i <FILE>`,
+  `-i <WATERMARK>`,
+  `-filter_complex overlay=W-w-10:H-h-10`,
+  `<OUTPUT>`,
+];
+const videoFfmpeg = [
+  `-i <FILE>`,
+  `-i <WATERMARK>`,
+  `-filter_complex overlay=W-w-10:H-h-10 -movflags frag_keyframe+empty_moov`,
+  `-f mp4 <OUTPUT>`,
+];
+const textMarkUp = "🦒 @mamad"
+module.exports.getTextMarkUp  = ()=>{return textMarkUp}
+module.exports.getVideoFfmpegConfig = ()=>{return videoFfmpeg}
+module.exports.getImageFfmpegConfig = () => {
+  return imageFfmpeg;
 };
-module.exports.getWarteMark = async (id)=>{
-  return waterMarkList[id].address
-}
+module.exports.getWaterMarksList = () => {
+  return waterMarksList;
+};

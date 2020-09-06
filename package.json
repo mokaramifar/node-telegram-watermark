@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "node-telegram-bot-api": "^0.50.0",
     "node-url-downloader": "^0.1.9",

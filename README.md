@@ -12,6 +12,7 @@
 </p>
 
 > Simple telegram watermark bot with NodeJs and ffmpeg .
+PLEASE Give a ⭐️ if this project is useful.
 
 ## Install
 
@@ -20,16 +21,14 @@ npm install
 ```
 
 ## Usage
-
+Add .env file as example.env file and add your token.
+Please note than NTBA_FIX_319 environment variables is required for Node-Telegram-Bot-api module.
 ```sh
 npm run start
 ```
+Although you can change Water Marks and captions from config.js file.
+If you are familiar with FFmpeg you can change config.js file for custom operations (like changing opacity and size).
 
-## Run tests
-
-```sh
-npm run dev 
-```
 
 ## Author
 
